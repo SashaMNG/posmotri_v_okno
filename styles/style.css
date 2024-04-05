@@ -120,7 +120,7 @@ ol {
 .search-form__textfield:active {
 	border: 1px solid currentColor;
 }
-
+/* dffd */
 .search-form__textfield:focus {
 	outline: none;
 }
