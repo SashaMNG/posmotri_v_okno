@@ -52,17 +52,17 @@ ol {
 
 .content {
 	display: flex;
-	flex-direction: row;
 	align-items: end;
 	gap: 30px;
+	block-size: 534px;
 }
 
 .result__video-container {
 	display: flex;
 	position: relative;
-	padding-block-end: 16px;
+	margin-block-end: 16px;
 	inline-size: 711px;
-	block-size: 406px;
+	block-size: 386px;
 }
 
 .result__video {
@@ -99,10 +99,6 @@ ol {
 	text-decoration: underline;
 }
 
-.search-form__label:focus {
-	outline: none;
-}
-
 .search-form__label:has(:focus-visible) {
 	outline: 1px solid #fff;
 	outline-offset: 1px;
@@ -114,8 +110,7 @@ ol {
 	color: #fff;
 	background-color: transparent;
 	border: 1px solid transparent;
-	border-block-start: 1px solid currentColor;
-	border-block-end: 1px solid currentColor;
+	border-block: 1px solid currentColor;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: 22px;
@@ -125,13 +120,9 @@ ol {
 .search-form__textfield:active {
 	border: 1px solid currentColor;
 }
-
+/* dffd */
 .search-form__textfield:focus {
 	outline: none;
-}
-
-.search-form__textfield:focus-visible {
-	outline: 1px solid currentColor;
 }
 
 .search-form__checkbox-list {
@@ -158,10 +149,7 @@ ol {
 }
 
 .button {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	min-block-size: 34px;
 	color: #fff;
 	border: 1px solid currentColor;
 	font-family: inherit;
@@ -179,20 +167,19 @@ ol {
 
 .button:focus-visible {
 	outline: 1px solid #fff;
-	outline-offset: 1px;
+	outline-offset: -3px;
 }
 
-button:hover {
+.button:hover {
 	text-decoration: underline;
 }
 
-button:active {
+.button:active {
 	background-color: rgb(84, 80, 80);
 }
 
 .search-form__submit-button {
 	min-inline-size: 194px;
-	min-block-size: 34px;
 }
 
 .content__details {
@@ -200,11 +187,10 @@ button:active {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 26px;
-	padding-block-start: 28px;
 }
 
 .title {
-	font-family: 'Oswald';
+	font-family: 'Oswald', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 75px;
@@ -246,7 +232,8 @@ button:active {
 	outline-offset: 1px;
 }
 
-.content__card-link_current:active {
+.content__card-link_current,
+.content__card-link:active {
 	background-color: #545050;
 }
 
@@ -256,7 +243,7 @@ button:active {
 }
 
 .content__video-card-description-container {
-	max-inline-size: 201px;
+	max-inline-size: 202px;
 }
 
 .content__video-card-title {
@@ -267,6 +254,9 @@ button:active {
 	line-height: 30px;
 	text-transform: uppercase;
 	color: inherit;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .content__video-card-description {
@@ -285,5 +275,4 @@ button:active {
 
 .more-button {
 	min-inline-size: 399px;
-	min-block-size: 34px;
 }
